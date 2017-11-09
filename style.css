@@ -1,0 +1,64 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ブレイクポイントと連動している container の幅になる。 */
+/* containerにデフォルトで入っているpaddingを設定 */
+.container {
+  margin: 0 auto;
+  border: 2px solid #000;
+  overflow: hidden;
+  position: relative;
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
+  /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */ }
+  .container.is-lg-width {
+    max-width: 1272px; }
+  .container.is-md-width {
+    max-width: 920px; }
+  .container.is-sm-width {
+    max-width: 768px; }
+  .container.is-xs-width {
+    max-width: 400px; }
+  @media screen and (max-width: calc(400px - 1px)) {
+    .container {
+      width: 100%; } }
+  @media screen and (min-width: 400px) {
+    .container {
+      width: 400px; } }
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 768px; } }
+  @media screen and (min-width: 920px) {
+    .container {
+      width: 920px; } }
+  @media screen and (min-width: 1272px) {
+    .container {
+      width: 1272px; } }
+  @media screen and (min-width: 1480px) {
+    .container {
+      width: 1480px; } }
+  .container.has-padding {
+    padding: 0 15px; }
+
+/* スキン系 */
+.is-bg-white {
+  background-color: #fff; }
+
+.is-border-white {
+  border-color: #fff; }
+
+/* アライン系 */
+.has-text-center {
+  text-align: center; }
+
+.has-text-right {
+  text-align: right; }
+
+/*# sourceMappingURL=style.css.map */
