@@ -1,0 +1,75 @@
+// Set variables for values≥
+$btn-height: 36px;
+$btn-radius: 3px;
+
+$main-color: #aaa;
+$btn-bg-color: $main-color; // mostly the same as site-main-color;
+$btn-text-color: #fff;
+
+// Change depending on design the systems.
+$btn-width: 300px;
+
+$animation-duration: 0.3s;
+
+
+button {
+  // reset default style for buttons
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 100%;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+
+  -webkit-transition-duration: $animation-duration;
+  -moz-transition-duration: $animation-duration;
+  -ms-transition-duration: $animation-duration;
+  -o-transition-duration: $animation-duration;
+  transition-duration: $animation-duration;
+  
+  // COLOR
+  &.has-main-bg-color {
+    background-color: $btn-bg-color;
+    color: $btn-text-color;
+  }
+
+  // SIZE
+  // Adjust culculation depending on the design system.
+  &.is-md {
+    height: $btn-height;
+    width: $btn-width;
+    line-height: $btn-height;
+
+    &.has-border-rounded-full {
+      -webkit-border-radius: calc(#{$btn-height}/2);
+      border-radius: calc(#{$btn-height}/2);
+    }
+  }
+
+  &.is-sm {
+    height: calc(#{$btn-height}*{2/3});
+    width: calc(#{$btn-width}/2);
+    line-height: calc(#{$btn-height}*{2/3});
+  }
+
+  &.is-lg {
+    height: calc(#{$btn-height}*1.5);
+    width: calc(#{$btn-width}*2);
+    line-height: calc(#{$btn-height}*1.5);
+  }
+
+  &.has-border-rounded {
+    -webkit-border-radius: $btn-radius;
+    border-radius: $btn-radius;
+  }
+}
+
+

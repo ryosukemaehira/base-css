@@ -1,0 +1,18 @@
+$text-color: #222;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem; // 1rem = 10px / default font-size = 16px
+  color: $text-color;
+  //  setting for font rendering
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  @media only screen and(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
