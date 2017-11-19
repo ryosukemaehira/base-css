@@ -12,6 +12,12 @@ $contents-width-md: 920px;
 $contents-width-lg: 1272px;
 $contents-width-xl: 1480px;
 
+$breakpoint-xs-down: $contents-width-xs - 1px;
+$breakpoint-sm-down: $contents-width-sm - 1px;
+$breakpoint-md-down: $contents-width-md - 1px;
+$breakpoint-lg-down: $contents-width-lg - 1px;
+$breakpoint-xl-down: $contents-width-xl - 1px;
+
 /* containerにデフォルトで入っているpaddingを設定 */
 $container-padding: 15px;
 
@@ -24,12 +30,12 @@ $map-breakpoint-up: (
   ) !default;
 
 $map-breakpoint-down: (
-  'xs': 'screen and (max-width: calc(#{$contents-width-xs} - 1px))',
-  'sm': 'screen and (max-width: calc(#{$contents-width-sm} - 1px))',
-  'md': 'screen and (max-width: calc(#{$contents-width-md} - 1px))',
-  'lg': 'screen and (max-width: calc(#{$contents-width-lg} - 1px))',
-  'xl': 'screen and (max-width: calc(#{$contents-width-xl} - 1px))',
-  ) !default;
+  'xs': 'screen and (max-width: #{$breakpoint-xs-down})',
+  'sm': 'screen and (max-width: #{$contents-width-sm})',
+  'md': 'screen and (max-width: #{$contents-width-md})',
+  'lg': 'screen and (max-width: #{$contents-width-lg})',
+  'xl': 'screen and (max-width: #{$contents-width-xl})',
+) !default;
 
 @mixin mq-up($breakpoint: md) {
   /* 引数無しのデフォルトでは md をブレイクポイントとする（ここはケースバイケースで使用頻度の高いものに入れ替える） */
@@ -62,7 +68,7 @@ $map-breakpoint-down: (
   &.is-sm-width {
     max-width: $contents-width-sm;
   }
-
+  
   &.is-xs-width {
     max-width: $contents-width-xs;
   }
