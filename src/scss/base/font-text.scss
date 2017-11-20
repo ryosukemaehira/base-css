@@ -1,18 +1,86 @@
-$text-color: #222;
+$text-color-main: #222;
+$text-color-bright: #aaa;
 
 html {
   font-size: 62.5%;
+  border-collapse: collapse;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
+}
+
+@include mq-down(xs) {
+  html {
+    font-size: 50%; // set route font-size as 8px for smart phone
+  }
 }
 
 body {
-  font-size: 1.6rem; // 1rem = 10px / default font-size = 16px
-  color: $text-color;
-  //  setting for font rendering
-  -webkit-font-smoothing: subpixel-antialiased;
+  font: 1.6rem/1.5 Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  //font: font-style font-variant font-weight font-size/line-height font-family|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;
+  // 1rem = 10px / default font-size = 16px
+  // font: 15px arial, sans-serif;
+  color: $text-color-main;
+  letter-spacing: 0.07em;
+
+  -webkit-font-smoothing: subpixel-antialiased; //  setting for font rendering
   -moz-osx-font-smoothing: unset;
   @media only screen and(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  font-kerning: normal;
+  font-feature-settings: "palt";
+  -moz-font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+  
+  font-variant-ligatures: no-common-ligatures; // disable regature setting globally or make a class if you don't need ligature.
 }
 
+// white css depending on your 
+
+p {
+  text-align: justify; // align on the both edge of paragraphs
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.6rem;
+}
+
+
+
+// utility for text style
+
+.has-text-gray {
+  color: $text-color-bright;
+}
+
+.has-text-center {
+  text-align: center;
+}
+
+.has-text-right {
+  text-align: right;
+} 
